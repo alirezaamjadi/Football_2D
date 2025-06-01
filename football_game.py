@@ -209,14 +209,19 @@ def goal_animation(scored_by_name):
     pygame.time.delay(2000)
 
 def handle_goal(scored_by):
-    global score1, score2, goal_time, goal_scored_by, ball_speed
+    global score1, score2
+
+
+
+def handle_goal(scored_by):
+    global score1, score2, goal_time, goal_scored_by, ball_speed, score1_target_scale, score2_target_scale
 
     if scored_by == 1:
-        score1_changed = True  # برای بازیکن اول اگر امتیاز تغییر کرد
-        score2_changed = True  # برای بازیکن دوم اگر امتیاز تغییر کرد
-
+        score1 += 1
+        score1_target_scale = 1.3  # انیمیشن بزرگ شدن امتیاز
     elif scored_by == 2:
         score2 += 1
+        score2_target_scale = 1.3
 
     goal_time = time.time()
     goal_scored_by = scored_by
@@ -226,6 +231,7 @@ def handle_goal(scored_by):
         goal_animation(player1_name)
     else:
         goal_animation(player2_name)
+
 
 def handle_game_end():
     global mode, score1, score2, player1_name, player2_name
