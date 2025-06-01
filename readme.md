@@ -23,15 +23,15 @@ pip install pygame
 سپس فایل اصلی بازی را اجرا کنید:
 
 ```bash
-python main.py
+python football_game
 ```
 
 ---
 
 ## 📂 ساختار پروژه
 
-* `main.py`: فایل اصلی بازی
-* `assets/`: پوشه شامل فایل‌های گرافیکی و صوتی
+* `football_game`: فایل اصلی بازی
+* `json`: بانک رکورد ها 
 * `README.md`: این فایل مستندات
 
 ---
@@ -66,7 +66,7 @@ pip install pygame
 Then run the main game file:
 
 ```bash
-python main.py
+python football_game.py
 ```
 
 ---
@@ -74,7 +74,7 @@ python main.py
 ## 📂 Project Structure
 
 * `main.py`: Main game file
-* `assets/`: Folder containing graphics and sound files
+* `json`: Record Storge
 * `README.md`: This documentation
 
 ---
